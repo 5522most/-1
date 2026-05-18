@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE CHRONICLE - Form Follows Function</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&amp;family=Chivo:ital,wght@0,100..900;1,100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"tertiary-fixed-dim": "#ffb77f", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", background: "#f9f9ff", "secondary-fixed-dim": "#9fccea", "on-error-container": "#93000a", "inverse-primary": "#ffb3b1", "tertiary-fixed": "#ffdcc4", "surface-tint": "#bb152c", "on-tertiary": "#ffffff", "on-background": "#001b3c", "primary-fixed-dim": "#ffb3b1", "on-tertiary-container": "#fffbff", "secondary-fixed": "#c5e7ff", "on-surface-variant": "#5b403f", "secondary-container": "#b2e0fe", "surface-container-highest": "#d5e3ff", outline: "#8f6f6e", surface: "#f9f9ff", "surface-container-high": "#dee8ff", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#1a4b64", "on-primary-container": "#fffbff", "surface-dim": "#c8dbff", "tertiary-container": "#a6652d", tertiary: "#894d16", primary: "#b7102a", "on-primary-fixed-variant": "#92001c", "outline-variant": "#e4bebc", "on-secondary": "#ffffff", "surface-container-low": "#f0f3ff", "on-secondary-fixed": "#001e2d", "primary-container": "#db313f", "primary-fixed": "#ffdad8", "surface-variant": "#d5e3ff", "inverse-surface": "#183153", "on-primary-fixed": "#410007", "on-tertiary-fixed-variant": "#6f3901", error: "#ba1a1a", "inverse-on-surface": "#ecf1ff", "on-tertiary-fixed": "#2f1500", "error-container": "#ffdad6", "on-secondary-container": "#36647e", "surface-container": "#e7eeff", secondary: "#35637d", "on-surface": "#001b3c", "surface-bright": "#f9f9ff"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"margin-desktop": "64px", gutter: "24px", "margin-mobile": "16px", unit: "4px", "border-thick": "4px", "border-thin": "1px"}, fontFamily: {"headline-md": ["Chivo"], "label-sm": ["Archivo Narrow"], "label-bold": ["Archivo Narrow"], "display-xl": ["Chivo"], "body-md": ["Inter"], "headline-lg-mobile": ["Chivo"], "body-lg": ["Inter"], "headline-lg": ["Chivo"], headline: ["Chivo"], display: ["Chivo"], body: ["Inter"], label: ["Archivo Narrow"]}, fontSize: {"headline-md": ["32px", {lineHeight: "1.2", fontWeight: "700"}], "label-sm": ["12px", {lineHeight: "1.2", fontWeight: "500"}], "label-bold": ["14px", {lineHeight: "1.2", fontWeight: "700"}], "display-xl": ["80px", {lineHeight: "1.0", letterSpacing: "-0.04em", fontWeight: "900"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}], "headline-lg-mobile": ["36px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "800"}], "body-lg": ["20px", {lineHeight: "1.6", fontWeight: "400"}], "headline-lg": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "800"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom thick borders to emulate Brutalist/Bauhaus aesthetic */
+        .border-brutal-thick { border-width: 4px; }
+        .border-brutal-thin { border-width: 2px; }
+      </style>
+</head>
+<body class="bg-background text-on-background min-h-screen antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="bg-background dark:bg-on-background border-b-thick border-on-background dark:border-background w-full">
+<div class="flex justify-between items-end px-margin-mobile md:px-margin-desktop py-4 w-full">
+<div class="flex items-center gap-6">
+<!-- Brand Logo -->
+<a class="font-display-xl text-display-xl font-black text-on-background dark:text-background tracking-tighter" href="#">
+                    THE CHRONICLE
+                </a>
+</div>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex items-center gap-8 pb-1">
+<a class="font-label-bold text-label-bold uppercase tracking-tighter text-primary dark:text-tertiary-fixed border-b-thick border-primary dark:border-tertiary-fixed pb-1" href="#">LATEST</a>
+<a class="font-label-bold text-label-bold uppercase tracking-tighter text-on-background dark:text-background hover:bg-primary hover:text-on-primary transition-colors duration-100 px-2 py-1" href="#">POLITICS</a>
+<a class="font-label-bold text-label-bold uppercase tracking-tighter text-on-background dark:text-background hover:bg-primary hover:text-on-primary transition-colors duration-100 px-2 py-1" href="#">CULTURE</a>
+<a class="font-label-bold text-label-bold uppercase tracking-tighter text-on-background dark:text-background hover:bg-primary hover:text-on-primary transition-colors duration-100 px-2 py-1" href="#">TECH</a>
+<a class="font-label-bold text-label-bold uppercase tracking-tighter text-on-background dark:text-background hover:bg-primary hover:text-on-primary transition-colors duration-100 px-2 py-1" href="#">OPINION</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="hidden md:flex font-label-bold text-label-bold uppercase tracking-tighter text-on-background border-brutal-thin border-on-background px-4 py-2 hover:bg-primary hover:text-on-primary hover:border-primary transition-colors duration-100">
+                    SUBSCRIBE
+                </button>
+<button class="md:hidden text-on-background">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="w-full">
+<!-- Hero Section -->
+<section class="w-full border-b-thick border-on-background bg-primary text-on-primary relative overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-12 md:gap-gutter px-margin-mobile md:px-margin-desktop py-12 md:py-24">
+<!-- Headline Area -->
+<div class="md:col-span-8 flex flex-col justify-center z-10 relative">
+<div class="bg-on-background text-primary px-4 py-1 inline-block w-fit mb-6 border-brutal-thick border-on-background">
+<span class="font-label-bold text-label-bold uppercase">BREAKING FORM</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-display-xl md:text-display-xl tracking-tighter mb-6 uppercase">
+                        The Architecture of Information Shifts
+                    </h1>
+<p class="font-body-lg text-body-lg max-w-2xl mb-8 border-l-4 border-on-background pl-4">
+                        A new paradigm in data structures is emerging, challenging the fundamental tenets of digital space allocation. Analysts observe a move towards brutalist efficiency over ornamental redundancy.
+                    </p>
+<a class="font-label-bold text-label-bold uppercase bg-background text-on-background border-brutal-thick border-on-background px-8 py-4 w-fit hover:bg-on-background hover:text-background transition-colors duration-100 flex items-center gap-2" href="#">
+                        READ THE MANIFESTO <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Geometric Image/Abstract Area -->
+<div class="hidden md:block md:col-span-4 relative h-full min-h-[400px] border-brutal-thick border-on-background bg-background">
+<img alt="Abstract geometric architecture." class="w-full h-full object-cover grayscale mix-blend-multiply opacity-80" data-alt="A stark, modern architectural composition featuring bold geometric lines and heavy concrete masses against a stark sky. The image emphasizes structural brutalism with high contrast, sharp shadows, and a distinct lack of ornamentation, aligning with a Bauhaus aesthetic. The color palette is restricted to monochrome concrete tones with stark white light and deep black shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYWCE-OovCRu2gW4QZiTwo30PCGqBVVBJUj61sOivn7yzuYvO7zUeKOK6hUifIyrr1biDg9w8IL21qLZo73rR5oIzkYUyj60yYxaFmxGEp5cURvCcQr2BjmVQu1orEv8KoTkDKkjRxj7KRPjvKGZ4Pst698-e7HhyelEVTNExb8uRDaooIOt77KAkacrTAqwuegIPfZVZdQprohFnjJPbYc32rAS-7H2X8esGI-t8d0H_l0_onEl3hBZBqSw5vaZ-VX1R8Bqa5QoA"/>
+<!-- Geometric overlay element -->
+<div class="absolute bottom-10 left-[-40px] w-32 h-32 bg-tertiary-container border-brutal-thick border-on-background rotate-12"></div>
+</div>
+</div>
+<!-- Large background geometric shape -->
+<div class="absolute -right-20 -top-20 w-96 h-96 rounded-full border-[16px] border-primary-container opacity-50 z-0"></div>
+</section>
+<!-- News Grid Section -->
+<section class="w-full">
+<div class="grid grid-cols-1 md:grid-cols-12 border-b-thick border-on-background">
+<!-- Left Column (Secondary Story) -->
+<article class="md:col-span-4 border-b-thick md:border-b-0 md:border-r-thick border-on-background bg-background hover:bg-surface-container-highest transition-colors duration-100 flex flex-col">
+<div class="p-gutter flex-grow">
+<div class="flex items-center gap-2 mb-4">
+<span class="w-3 h-3 bg-secondary rounded-none"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">POLITICS</span>
+</div>
+<h2 class="font-headline-md text-headline-md mb-4 uppercase">
+                            Regulatory Frameworks Collide
+                        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            New zoning laws threaten the established industrial centers, forcing a reevaluation of spatial priorities in urban planning.
+                        </p>
+</div>
+<div class="border-t-thin border-on-background p-gutter mt-auto flex justify-between items-center">
+<span class="font-label-sm text-label-sm uppercase">By A. Roark</span>
+<span class="material-symbols-outlined text-secondary">domain</span>
+</div>
+</article>
+<!-- Center Column (Featured Image Story) -->
+<article class="md:col-span-5 border-b-thick md:border-b-0 md:border-r-thick border-on-background bg-surface-container relative group overflow-hidden">
+<img alt="Industrial machinery." class="absolute inset-0 w-full h-full object-cover grayscale mix-blend-multiply opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-500" data-alt="A high-contrast black and white photograph of heavy industrial machinery, focusing on interlocking gears and rigid steel structures. The lighting is harsh and directional, emphasizing texture and form over detail. The image reflects a functional, machine-age aesthetic typical of early 20th-century modernist industrial photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm48vlfo7SjvOe6aG8C8nTRb9LPQnqrtRT1dmdZuihVfzOwVK8yzX9C82gv9whS0NTbpmBJk6cskAenox3QJslEcrW2icXkO2Bfx7ko24pZy-HMD9nyzThiniB6d150Vpz2JvlkkdjIWYMmv9bp04ws1mEZpbcQLHgmR-nuTzfSkGKJKq7LLD_O41v00fTORD8a1C6-FR7c9qF8sZxWacZ_qicS_VY5c0O91mIQShQ7bz0ZfPSwuuF8qJK-wz173-MaM39ih1rHsI"/>
+<div class="relative z-10 p-gutter h-full flex flex-col justify-end min-h-[400px]">
+<div class="bg-background border-brutal-thick border-on-background p-6">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-3 h-3 bg-tertiary-container rounded-none"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">TECH</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile uppercase mb-2">
+                                The Mechanization of Thought
+                            </h2>
+<p class="font-body-md text-body-md mb-4 hidden md:block">
+                                Algorithmic processing reaches structural parity with human cognitive frameworks.
+                            </p>
+<a class="font-label-bold text-label-bold uppercase hover:underline flex items-center gap-1" href="#">
+                                Analyze <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Right Column (List/Briefs) -->
+<aside class="md:col-span-3 bg-background flex flex-col">
+<div class="p-gutter border-b-thin border-on-background bg-on-background text-background">
+<h3 class="font-label-bold text-label-bold uppercase tracking-widest text-center">TICKER / LOG</h3>
+</div>
+<a class="block p-gutter border-b-thin border-on-background hover:bg-primary hover:text-on-primary transition-colors duration-100 group" href="#">
+<time class="font-label-sm text-label-sm uppercase text-on-surface-variant group-hover:text-primary-fixed block mb-1">10:42 AM</time>
+<h4 class="font-headline-md text-headline-md text-[20px] leading-tight">Market structures stabilize after shock.</h4>
+</a>
+<a class="block p-gutter border-b-thin border-on-background hover:bg-secondary hover:text-on-secondary transition-colors duration-100 group" href="#">
+<time class="font-label-sm text-label-sm uppercase text-on-surface-variant group-hover:text-secondary-fixed block mb-1">09:15 AM</time>
+<h4 class="font-headline-md text-headline-md text-[20px] leading-tight">Cultural summit yields rigid guidelines.</h4>
+</a>
+<a class="block p-gutter hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors duration-100 group flex-grow" href="#">
+<time class="font-label-sm text-label-sm uppercase text-on-surface-variant group-hover:text-tertiary-fixed block mb-1">08:00 AM</time>
+<h4 class="font-headline-md text-headline-md text-[20px] leading-tight">New exhibition challenges spatial norms.</h4>
+</a>
+</aside>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-background dark:bg-surface-container-lowest w-full border-t-thick border-on-background dark:border-background">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop py-12 w-full">
+<!-- Brand & Copyright -->
+<div class="md:col-span-6 flex flex-col justify-between">
+<div class="font-headline-lg text-headline-lg font-black text-background dark:text-on-background tracking-tighter mb-8 md:mb-0">
+                    THE CHRONICLE
+                </div>
+<div class="font-label-sm text-label-sm uppercase text-background dark:text-on-background mt-8 md:mt-0">
+                    © 2024 THE CHRONICLE. FORM FOLLOWS FUNCTION.
+                </div>
+</div>
+<!-- Links -->
+<div class="md:col-span-6 flex flex-col md:items-end justify-between">
+<nav class="flex flex-wrap md:justify-end gap-6 md:gap-8">
+<a class="font-label-sm text-label-sm uppercase text-background dark:text-on-background hover:text-primary-fixed-dim transition-colors" href="#">ARCHIVE</a>
+<a class="font-label-sm text-label-sm uppercase text-background dark:text-on-background hover:text-primary-fixed-dim transition-colors" href="#">MASTHEAD</a>
+<a class="font-label-sm text-label-sm uppercase text-background dark:text-on-background hover:text-primary-fixed-dim transition-colors" href="#">PRIVACY</a>
+<a class="font-label-sm text-label-sm uppercase text-background dark:text-on-background hover:text-primary-fixed-dim transition-colors" href="#">TERMS</a>
+<a class="font-label-sm text-label-sm uppercase text-background dark:text-on-background hover:text-primary-fixed-dim transition-colors" href="#">ADVERTISE</a>
+</nav>
+<!-- Decorative Graphic -->
+<div class="mt-12 flex gap-1 md:justify-end">
+<div class="w-8 h-8 bg-primary"></div>
+<div class="w-8 h-8 bg-secondary"></div>
+<div class="w-8 h-8 bg-tertiary-container"></div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Chronicle - Category Browse</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&amp;family=Chivo:wght@700;800;900&amp;family=Inter:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"tertiary-fixed-dim": "#ffb77f", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", background: "#f9f9ff", "secondary-fixed-dim": "#9fccea", "on-error-container": "#93000a", "inverse-primary": "#ffb3b1", "tertiary-fixed": "#ffdcc4", "surface-tint": "#bb152c", "on-tertiary": "#ffffff", "on-background": "#001b3c", "primary-fixed-dim": "#ffb3b1", "on-tertiary-container": "#fffbff", "secondary-fixed": "#c5e7ff", "on-surface-variant": "#5b403f", "secondary-container": "#b2e0fe", "surface-container-highest": "#d5e3ff", outline: "#8f6f6e", surface: "#f9f9ff", "surface-container-high": "#dee8ff", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#1a4b64", "on-primary-container": "#fffbff", "surface-dim": "#c8dbff", "tertiary-container": "#a6652d", tertiary: "#894d16", primary: "#b7102a", "on-primary-fixed-variant": "#92001c", "outline-variant": "#e4bebc", "on-secondary": "#ffffff", "surface-container-low": "#f0f3ff", "on-secondary-fixed": "#001e2d", "primary-container": "#db313f", "primary-fixed": "#ffdad8", "surface-variant": "#d5e3ff", "inverse-surface": "#183153", "on-primary-fixed": "#410007", "on-tertiary-fixed-variant": "#6f3901", error: "#ba1a1a", "inverse-on-surface": "#ecf1ff", "on-tertiary-fixed": "#2f1500", "error-container": "#ffdad6", "on-secondary-container": "#36647e", "surface-container": "#e7eeff", secondary: "#35637d", "on-surface": "#001b3c", "surface-bright": "#f9f9ff"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"margin-desktop": "64px", gutter: "24px", "margin-mobile": "16px", unit: "4px", "border-thick": "4px", "border-thin": "1px"}, fontFamily: {"headline-md": ["Chivo"], "label-sm": ["Archivo Narrow"], "label-bold": ["Archivo Narrow"], "display-xl": ["Chivo"], "body-md": ["Inter"], "headline-lg-mobile": ["Chivo"], "body-lg": ["Inter"], "headline-lg": ["Chivo"], headline: ["Chivo"], display: ["Chivo"], body: ["Inter"], label: ["Archivo Narrow"]}, fontSize: {"headline-md": ["32px", {lineHeight: "1.2", fontWeight: "700"}], "label-sm": ["12px", {lineHeight: "1.2", fontWeight: "500"}], "label-bold": ["14px", {lineHeight: "1.2", fontWeight: "700"}], "display-xl": ["80px", {lineHeight: "1.0", letterSpacing: "-0.04em", fontWeight: "900"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}], "headline-lg-mobile": ["36px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "800"}], "body-lg": ["20px", {lineHeight: "1.6", fontWeight: "400"}], "headline-lg": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "800"}]}}}};</script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-background dark:bg-on-background text-primary dark:text-primary-fixed font-label-bold text-label-bold uppercase tracking-tighter w-full border-b-thick border-on-background dark:border-background hidden md:flex justify-between items-end px-margin-desktop py-4">
+<div class="flex items-end gap-8">
+<a class="font-display-xl text-display-xl font-black text-on-background dark:text-background tracking-tighter hover:bg-primary hover:text-on-primary transition-colors duration-100" href="#">THE CHRONICLE</a>
+<nav class="flex gap-6 mb-2">
+<a class="text-on-background dark:text-background hover:bg-primary hover:text-on-primary transition-colors duration-100" href="#">LATEST</a>
+<a class="text-primary dark:text-tertiary-fixed border-b-thick border-primary dark:border-tertiary-fixed pb-1 hover:bg-primary hover:text-on-primary transition-colors duration-100 translate-y-1 transition-transform" href="#">POLITICS</a>
+<a class="text-on-background dark:text-background hover:bg-primary hover:text-on-primary transition-colors duration-100" href="#">CULTURE</a>
+<a class="text-on-background dark:text-background hover:bg-primary hover:text-on-primary transition-colors duration-100" href="#">TECH</a>
+<a class="text-on-background dark:text-background hover:bg-primary hover:text-on-primary transition-colors duration-100" href="#">OPINION</a>
+</nav>
+</div>
+<div class="flex items-center gap-4 mb-2">
+<button class="border-2 border-on-background px-4 py-1 hover:bg-on-background hover:text-background transition-colors duration-100">SUBSCRIBE</button>
+<span class="material-symbols-outlined cursor-pointer hover:bg-primary hover:text-on-primary transition-colors duration-100 p-1">search</span>
+</div>
+</header>
+<!-- Mobile Header Fallback (Simplified for context, assumes hidden on md) -->
+<header class="md:hidden flex justify-between items-center p-4 border-b-thick border-on-background">
+<a class="font-headline-lg-mobile text-headline-lg-mobile font-black tracking-tighter" href="#">THE CHRONICLE</a>
+<span class="material-symbols-outlined">menu</span>
+</header>
+<main class="flex-grow w-full max-w-[1440px] mx-auto">
+<!-- Main Content Area -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-0 border-b-thick border-on-background">
+<!-- Category Hero Block (Politics) -->
+<section class="md:col-span-12 border-b-thick border-on-background grid grid-cols-1 md:grid-cols-12 bg-primary">
+<div class="md:col-span-8 p-margin-mobile md:p-margin-desktop border-r-thick border-on-background flex flex-col justify-end min-h-[409px] md:min-h-[614px]">
+<h1 class="font-display-xl text-display-xl text-on-primary break-words">POLITICS</h1>
+</div>
+<div class="md:col-span-4 p-margin-mobile md:p-margin-desktop bg-background text-on-background flex flex-col justify-between">
+<div>
+<span class="font-label-bold text-label-bold block mb-4 border-b-thin border-on-background pb-2">FEATURED</span>
+<h2 class="font-headline-md text-headline-md mb-4 hover:bg-primary hover:text-on-primary transition-colors cursor-pointer inline-block">The Architecture of Power: A New Bill Looms</h2>
+<p class="font-body-md text-body-md mb-8">An in-depth analysis of the structural shifts occurring in the capitol, revealing stark contrasts in foundational policies.</p>
+</div>
+<a class="font-label-bold text-label-bold border-2 border-on-background py-2 px-4 text-center hover:bg-on-background hover:text-background transition-colors self-start" href="#">READ FULL STORY</a>
+</div>
+</section>
+<!-- Article List Section -->
+<section class="md:col-span-12 grid grid-cols-1 md:grid-cols-12 gap-0">
+<!-- Left Column: Article List -->
+<div class="md:col-span-8 border-r-thick border-on-background">
+<!-- Article Item -->
+<article class="grid grid-cols-12 border-b-thin border-on-background hover:bg-surface-container transition-colors group cursor-pointer">
+<div class="col-span-2 md:col-span-1 p-4 md:p-6 flex items-start justify-center border-r-thin border-on-background">
+<span class="font-headline-md text-headline-md text-primary">01</span>
+</div>
+<div class="col-span-10 md:col-span-11 p-4 md:p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2">
+<h3 class="font-headline-md text-headline-md mb-2 group-hover:underline">Electoral Shifts in Key Districts</h3>
+<p class="font-body-md text-body-md">Early polling indicates a significant realignment of voter priorities, focusing heavily on infrastructure and economic stability.</p>
+</div>
+<div class="hidden md:block col-span-1 border-l-thin border-on-background pl-6 flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-2">BY J. DOE</span>
+<span class="font-label-sm text-label-sm block">12 MIN READ</span>
+</div>
+</div>
+</article>
+<!-- Article Item -->
+<article class="grid grid-cols-12 border-b-thin border-on-background hover:bg-surface-container transition-colors group cursor-pointer">
+<div class="col-span-2 md:col-span-1 p-4 md:p-6 flex items-start justify-center border-r-thin border-on-background bg-secondary text-on-secondary">
+<span class="font-headline-md text-headline-md">02</span>
+</div>
+<div class="col-span-10 md:col-span-11 p-4 md:p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2">
+<h3 class="font-headline-md text-headline-md mb-2 group-hover:underline">Debate Strategies: Form vs. Function</h3>
+<p class="font-body-md text-body-md">An analysis of rhetorical techniques employed in recent debates, dissecting substance from stylistic delivery.</p>
+</div>
+<div class="hidden md:block col-span-1 border-l-thin border-on-background pl-6 flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-2">BY A. SMITH</span>
+<span class="font-label-sm text-label-sm block">8 MIN READ</span>
+</div>
+</div>
+</article>
+<!-- Article Item -->
+<article class="grid grid-cols-12 border-b-thin border-on-background hover:bg-surface-container transition-colors group cursor-pointer">
+<div class="col-span-2 md:col-span-1 p-4 md:p-6 flex items-start justify-center border-r-thin border-on-background">
+<span class="font-headline-md text-headline-md text-primary">03</span>
+</div>
+<div class="col-span-10 md:col-span-11 p-4 md:p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2">
+<h3 class="font-headline-md text-headline-md mb-2 group-hover:underline">The Economic Impact of New Tariffs</h3>
+<p class="font-body-md text-body-md">Examining the ripple effects of international trade policies on local manufacturing sectors.</p>
+</div>
+<div class="hidden md:block col-span-1 border-l-thin border-on-background pl-6 flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-2">BY M. LEE</span>
+<span class="font-label-sm text-label-sm block">15 MIN READ</span>
+</div>
+</div>
+</article>
+<!-- Article Item -->
+<article class="grid grid-cols-12 border-b-thin border-on-background hover:bg-surface-container transition-colors group cursor-pointer">
+<div class="col-span-2 md:col-span-1 p-4 md:p-6 flex items-start justify-center border-r-thin border-on-background">
+<span class="font-headline-md text-headline-md text-primary">04</span>
+</div>
+<div class="col-span-10 md:col-span-11 p-4 md:p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2">
+<h3 class="font-headline-md text-headline-md mb-2 group-hover:underline">Legislative Deadlock: A System Review</h3>
+<p class="font-body-md text-body-md">A critical look at the procedural hurdles preventing significant legislative progress.</p>
+</div>
+<div class="hidden md:block col-span-1 border-l-thin border-on-background pl-6 flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-2">BY E. CHEN</span>
+<span class="font-label-sm text-label-sm block">10 MIN READ</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Right Column: Context/Sidebar -->
+<aside class="md:col-span-4 bg-surface flex flex-col">
+<div class="p-margin-mobile md:p-margin-desktop border-b-thin border-on-background flex-grow">
+<span class="font-label-bold text-label-bold block mb-6 border-b-thin border-on-background pb-2">DATA POINTS</span>
+<div class="mb-8">
+<div class="flex justify-between items-end mb-2">
+<span class="font-body-md text-body-md font-bold">APPROVAL RATING</span>
+<span class="font-headline-md text-headline-md">42%</span>
+</div>
+<div class="h-4 border-2 border-on-background w-full bg-background relative">
+<div class="absolute top-0 left-0 h-full bg-primary" style="width: 42%;"></div>
+</div>
+</div>
+<div class="mb-8">
+<div class="flex justify-between items-end mb-2">
+<span class="font-body-md text-body-md font-bold">VOTER TURNOUT PROJ.</span>
+<span class="font-headline-md text-headline-md">68%</span>
+</div>
+<div class="h-4 border-2 border-on-background w-full bg-background relative">
+<div class="absolute top-0 left-0 h-full bg-secondary" style="width: 68%;"></div>
+</div>
+</div>
+</div>
+<div class="p-margin-mobile md:p-margin-desktop bg-on-background text-background">
+<span class="font-label-bold text-label-bold block mb-4 border-b-thin border-background pb-2">NEWSLETTER</span>
+<h3 class="font-headline-md text-headline-md mb-4">THE DAILY BRIEFING</h3>
+<p class="font-body-md text-body-md mb-6 text-surface-container-high">Structural analysis of daily events delivered to your inbox.</p>
+<form class="flex flex-col gap-4">
+<input class="bg-transparent border-b-2 border-background text-background placeholder:text-surface-variant focus:outline-none focus:border-b-4 focus:border-primary py-2 font-body-md" placeholder="EMAIL ADDRESS" type="email"/>
+<button class="bg-primary text-on-primary font-label-bold py-3 hover:bg-background hover:text-on-background transition-colors border-2 border-transparent hover:border-background" type="submit">SUBSCRIBE</button>
+</form>
+</div>
+</aside>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-on-background dark:bg-surface-container-lowest text-background dark:text-on-background font-label-sm text-label-sm uppercase w-full border-t-thick border-on-background dark:border-background grid grid-cols-12 gap-gutter px-margin-desktop py-12">
+<div class="col-span-12 md:col-span-4 mb-8 md:mb-0">
+<span class="font-headline-lg text-headline-lg font-black text-background dark:text-on-background block mb-4">THE CHRONICLE</span>
+<p>© 2024 THE CHRONICLE. FORM FOLLOWS FUNCTION.</p>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-wrap gap-8 md:justify-end items-end">
+<a class="text-background dark:text-on-background hover:text-primary-fixed-dim" href="#">ARCHIVE</a>
+<a class="text-background dark:text-on-background hover:text-primary-fixed-dim" href="#">MASTHEAD</a>
+<a class="text-background dark:text-on-background hover:text-primary-fixed-dim" href="#">PRIVACY</a>
+<a class="text-background dark:text-on-background hover:text-primary-fixed-dim" href="#">TERMS</a>
+<a class="text-background dark:text-on-background hover:text-primary-fixed-dim" href="#">ADVERTISE</a>
+</div>
+</footer>
+</body></html>
